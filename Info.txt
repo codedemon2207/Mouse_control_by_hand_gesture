@@ -1,7 +1,7 @@
 Hey this is Shankar Shakya
 I am very happy to share you that I have made new project by own. I have used some python libraries to
 make this project which controls the action of mouse by hand gestures and give us feeling of virtual mouse. I was energetic and
-motivated during this project.
+motivated during this project and feeling good to learn new things.
 
 Python libraries used:
 1. Mediapipe  :- for hand detection,hand landmarks detection etc.
