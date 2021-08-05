@@ -56,16 +56,16 @@ class handDetector():
         # print(self.lmlist)
         return self.lmlist,bbox
 
-    def findDistance(self,p1,p2,img,draw=True,r=15,t=3):
+    def findDistance(self,p1,p2,img,draw=True,radius=15,thikness=3):
         x1,y1=self.lmlist[p1][1:]
         x2,y2=self.lmlist[p2][1:]
         cx,cy=(x1+x2)//2,(y1+y2)//2
 
         if draw:
-            cv2.line(img,(x1,y1),(x2,y2),(255,0,255),t)
-            cv2.circle(img, (x1,y1), r, (255, 0, 255), cv2.FILLED)
-            cv2.circle(img, (x2,y2), r, (255, 0, 255), cv2.FILLED)
-            cv2.circle(img, (cx,cy), r, (0, 0, 255), cv2.FILLED)
+            cv2.line(img,(x1,y1),(x2,y2),(255,0,255),thickness)
+            cv2.circle(img, (x1,y1), radius, (255, 0, 255), cv2.FILLED)
+            cv2.circle(img, (x2,y2), radius, (255, 0, 255), cv2.FILLED)
+            cv2.circle(img, (cx,cy), radius, (0, 0, 255), cv2.FILLED)
         length=math.hypot(x2-x1,y2-y1)
 
         return length,img,[x1,y1,x2,y2,cx,cy]
