@@ -35,12 +35,11 @@ while True:
         # print(x1,y1)
         # print(x2,y2)
     #3. check which fingers are up
-    # fingers=detector.fingersUp()
-    # print(fingers)
+    
     fingers=detector.fingersUp()
-    print(fingers)
+    #print(fingers)
 
-    # print(fingers)
+    
     cv2.rectangle(img, (300, 50), (600,300), (255, 0, 255), 2)
     #4. only index fingers: moving mode
     if fingers[1]==1 and fingers[2]==0:
@@ -70,6 +69,8 @@ while True:
     # if fingers[0] == 1 and fingers[1]==0 and fingers[2]==0 and fingers[3]==0 and fingers[4]==0 and fingers[5]==0:
     #     py.scroll(15)
 
+    
+    
     #11. frame rate
 
     ctime=time.time()
